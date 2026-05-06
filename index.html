@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora de Equipamentos SVC — Mercado Libre</title>
+<title>Calculadora de Equipamientos SVC — Mercado Libre</title>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -99,7 +99,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 .prem-val { font-size:13px; font-weight:600; color:var(--dark); }
 @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 .animate { animation: fadeUp .25s ease forwards; }
-
 .hero-title-wrap { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
 .hero-ml-icon { width: 46px; height: 46px; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .hero-ml-icon svg { width: 26px; height: 26px; }
@@ -115,66 +114,66 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
     <div class="logo-mark"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.5" r="3.5" fill="#FFE600"/><path d="M2.5 17.5c0-4.142 3.358-7.5 7.5-7.5s7.5 3.358 7.5 7.5" stroke="#FFE600" stroke-width="2.2" stroke-linecap="round"/></svg></div>
     <div>
       <div class="logo-name">Mercado Libre</div>
-      <div class="logo-sub">Ferramentas Internas</div>
+      <div class="logo-sub">Herramientas Internas</div>
     </div>
   </a>
   <div class="header-right">
     <a class="btn-voltar" href="https://mtm-paginainicialpt.vercel.app/">&#8592; Página inicial</a>
-    <a class="lang-link" href="https://mtm-calculadoraequipamentosvces.vercel.app/">&#127466;&#127480; Español</a>
+    <a class="lang-link" href="https://mtm-calculadoraequipamentosvcpt.vercel.app/">&#127463;&#127479; Português</a>
     <span class="badge-ops">SVC — Service Center</span>
   </div>
 </header>
 
 <div class="hero">
-  <div class="hero-tag">Planejamento Operacional</div>
+  <div class="hero-tag">Planificación Operacional</div>
   <div class="hero-title-wrap">
     <div class="hero-ml-icon"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="8" r="4.5" fill="#FFE600"/><path d="M2 24c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#FFE600" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-    <h1>Calculadora de Equipamentos SVC</h1>
+    <h1>Calculadora de Equipamientos SVC</h1>
   </div>
-  <p>Estime a quantidade de equipamentos necessários para operação de Service Center com base nos parâmetros do seu ciclo maior.</p>
+  <p>Estimá la cantidad de equipamientos necesarios para la operación de Service Center en base a los parámetros de tu ciclo mayor.</p>
 </div>
 
 <div class="container">
   <div class="layout">
     <div>
 
-      <!-- DADOS OPS -->
+      <!-- DATOS OPS -->
       <div class="card">
         <div class="card-header">
           <div class="card-icon">&#128230;</div>
-          <div><h2>Dados operacionais</h2><p>Parâmetros gerais do ciclo maior</p></div>
+          <div><h2>Datos operacionales</h2><p>Parámetros generales del ciclo mayor</p></div>
         </div>
         <div class="card-body">
-          <div class="sec-label">Volume e composição</div>
+          <div class="sec-label">Volumen y composición</div>
 
           <div class="field-row">
             <div class="field">
-              <label>Volume total <span class="hint">(pacotes/ciclo)</span></label>
+              <label>Volumen total <span class="hint">(paquetes/ciclo)</span></label>
               <input type="number" id="volTotal" value="30000" min="1">
-              <div class="field-comment">Volume total de pacotes processados no maior ciclo.</div>
+              <div class="field-comment">Volumen total de paquetes procesados en el ciclo mayor.</div>
             </div>
             <div class="field">
-              <label>% Volumosos (Large)</label>
+              <label>% Voluminosos (Large)</label>
               <div class="range-row">
                 <input type="range" id="pctVolSlider" min="0" max="50" value="15" step="1"
                   oninput="sync('pctVolSlider','pctVol','pctVolVal','%')">
                 <span class="range-val" id="pctVolVal">15%</span>
               </div>
               <input type="hidden" id="pctVol" value="15">
-              <div class="field-comment">% total de volumosos do maior ciclo.</div>
+              <div class="field-comment">% total de voluminosos del ciclo mayor.</div>
             </div>
           </div>
 
           <div class="field-row">
             <div class="field">
-              <label>Baker espelho GM (%)</label>
+              <label>Baker espejo GM (%)</label>
               <div class="range-row">
                 <input type="range" id="espejoSlider" min="0" max="50" value="22" step="1"
                   oninput="sync('espejoSlider','espejo','espejoVal','%')">
                 <span class="range-val" id="espejoVal">22%</span>
               </div>
               <input type="hidden" id="espejo" value="22">
-              <div class="field-comment">Quantidade de bakers extras para armado de rota pelo volume que não cabe no primeiro baker de GM.</div>
+              <div class="field-comment">Cantidad de bakers extra para armado de ruta por el volumen que no cabe en el primer baker de GM.</div>
             </div>
             <div class="field">
               <label>Baker backup ops (%)</label>
@@ -184,29 +183,29 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
                 <span class="range-val" id="backupVal">1%</span>
               </div>
               <input type="hidden" id="backup" value="1">
-              <div class="field-comment">Quantidade de baker extra para backup por danos e usos não identificados como padrão.</div>
+              <div class="field-comment">Cantidad de baker extra para backup por daños y usos no identificados como estándar.</div>
             </div>
           </div>
 
           <div class="field">
             <label>Horas de sorteo</label>
             <input type="number" id="horasSorteo" value="3" min="0.5" step="0.5">
-            <div class="field-comment">Horas de sorteo do maior ciclo.</div>
+            <div class="field-comment">Horas de sorteo del ciclo mayor.</div>
           </div>
 
           <hr class="divider">
-          <div class="sec-label">SPP (fixo por indicação)</div>
+          <div class="sec-label">SPP (fijo por indicación)</div>
 
           <div class="field-row">
             <div class="field">
-              <label>SPP GM (fixo: 80)</label>
+              <label>SPP GM (fijo: 80)</label>
               <input type="number" id="sppGM" value="80" readonly>
-              <div class="field-comment warn">SPP fixo em 80 por indicação. Representa a quantidade média de pacotes por baker para GM.</div>
+              <div class="field-comment warn">SPP fijo en 80 por indicación. Representa la cantidad promedio de paquetes por baker para GM.</div>
             </div>
             <div class="field">
-              <label>SPP Large (fixo: 15)</label>
+              <label>SPP Large (fijo: 15)</label>
               <input type="number" id="sppLarge" value="15" readonly>
-              <div class="field-comment warn">SPP fixo em 15 por indicação. Quantidade de pacotes volumosos que se pode posicionar em um baker.</div>
+              <div class="field-comment warn">SPP fijo en 15 por indicación. Cantidad de paquetes voluminosos que se pueden posicionar en un baker.</div>
             </div>
           </div>
 
@@ -214,7 +213,7 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
           <div class="sec-label">Bandejas para Baker GM</div>
 
           <div class="toggle-row">
-            <span class="toggle-label">Utilizar bandejas para Baker GM?</span>
+            <span class="toggle-label">¿Utilizar bandejas para Baker GM?</span>
             <label class="toggle">
               <input type="checkbox" id="usaBandeja" checked onchange="toggleBandeja()">
               <span class="slider-tog"></span>
@@ -223,16 +222,16 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
           <div class="field" id="bandeja-qtd-wrap" style="margin-top:10px">
             <label>Bandejas por Baker GM</label>
             <input type="number" id="bandejasPorBaker" value="2" min="1">
-            <div class="field-comment">Quantidade de bandejas por baker GM quando utilizadas.</div>
+            <div class="field-comment">Cantidad de bandejas por baker GM cuando se utilizan.</div>
           </div>
 
           <hr class="divider">
-          <div class="sec-label">Televisores e Frágeis</div>
+          <div class="sec-label">Televisores y Frágiles</div>
 
           <div class="field">
-            <label>Quantidade de Televisores</label>
+            <label>Cantidad de Televisores</label>
             <input type="number" id="qtdTv" value="20" min="0">
-            <div class="field-comment">Quantidade de televisores no dia PICO. Os bakers de televisores e frágeis são do mesmo tipo — calculados com SPP fixo em 6 (capacidade por baker de frágeis).</div>
+            <div class="field-comment">Cantidad de televisores en el día PICO. Los bakers de televisores y frágiles son del mismo tipo — calculados con SPP fijo en 6 (capacidad por baker de frágiles).</div>
           </div>
         </div>
       </div>
@@ -241,19 +240,19 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
       <div class="card">
         <div class="card-header">
           <div class="card-icon">&#128256;</div>
-          <div><h2>Sorteo GM — Layout</h2><p>Flow Contínuo e Carritos de supermercado</p></div>
+          <div><h2>Sorteo GM — Layout</h2><p>Flow Continuo y Carritos de supermercado</p></div>
         </div>
         <div class="card-body">
           <div class="field-row">
             <div class="field">
-              <label>Ilhas GM (0 = calcular auto)</label>
+              <label>Islas GM (0 = calcular auto)</label>
               <input type="number" id="ilhasGM" value="0" min="0">
-              <div class="field-comment">Identifique no layout de engenharia quantas ilhas total para sorteo. Se não tiver a informação, deixe 0 — o sistema calcula automaticamente com base nos bakers/ilha. Padrão usado: 22 bakers/ilha.</div>
+              <div class="field-comment">Identificá en el layout de ingeniería cuántas islas total para sorteo. Si no tenés la información, dejá 0 — el sistema calcula automáticamente en base a los bakers/isla. Estándar usado: 22 bakers/isla.</div>
             </div>
             <div class="field">
-              <label>Bakers por Ilha GM</label>
+              <label>Bakers por Isla GM</label>
               <input type="number" id="bkPorIlhaGM" value="22" min="1">
-              <div class="field-comment">Identifique no layout de engenharia quantos bakers há em cada ilha para sorteo. Padrão: 22 bakers/ilha — sempre confirmar com o layout de ING.</div>
+              <div class="field-comment">Identificá en el layout de ingeniería cuántos bakers hay en cada isla para sorteo. Estándar: 22 bakers/isla — siempre confirmar con el layout de ING.</div>
             </div>
           </div>
         </div>
@@ -263,11 +262,11 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
       <div class="card">
         <div class="card-header">
           <div class="card-icon">&#128208;</div>
-          <div><h2>Sorteo Large — Layout</h2><p>Flow Large Menor e Maior</p></div>
+          <div><h2>Sorteo Large — Layout</h2><p>Flow Large Menor y Mayor</p></div>
         </div>
         <div class="card-body">
           <div class="toggle-row">
-            <span class="toggle-label">Banda motorizada para Large?</span>
+            <span class="toggle-label">¿Banda motorizada para Large?</span>
             <label class="toggle">
               <input type="checkbox" id="bandaLarge">
               <span class="slider-tog"></span>
@@ -276,14 +275,14 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
           <hr class="divider">
           <div class="field-row">
             <div class="field">
-              <label>Ilhas Large (0 = calcular auto)</label>
+              <label>Islas Large (0 = calcular auto)</label>
               <input type="number" id="ilhasLarge" value="0" min="0">
-              <div class="field-comment">Identifique no layout de engenharia quantas ilhas total para sorteo Large. Se não tiver a informação, deixe 0. Padrão usado: 16 bakers/ilha — sempre confirmar com o layout de ING.</div>
+              <div class="field-comment">Identificá en el layout de ingeniería cuántas islas total para sorteo Large. Si no tenés la información, dejá 0. Estándar usado: 16 bakers/isla — siempre confirmar con el layout de ING.</div>
             </div>
             <div class="field">
-              <label>Bakers por Ilha Large</label>
+              <label>Bakers por Isla Large</label>
               <input type="number" id="bkPorIlhaLarge" value="16" min="1">
-              <div class="field-comment">Identifique no layout de engenharia quantos bakers há por ilha Large. Padrão: 16 bakers/ilha — sempre confirmar com o layout de ING.</div>
+              <div class="field-comment">Identificá en el layout de ingeniería cuántos bakers hay por isla Large. Estándar: 16 bakers/isla — siempre confirmar con el layout de ING.</div>
             </div>
           </div>
         </div>
@@ -293,19 +292,19 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
       <div class="card">
         <div class="card-header">
           <div class="card-icon">&#128667;</div>
-          <div><h2>Recepção — Granel e BULKY</h2><p>Flow Flex Manual e Carrito de elevação</p></div>
+          <div><h2>Recepción — Granel y BULKY</h2><p>Flow Flex Manual y Carrito de elevación</p></div>
         </div>
         <div class="card-body">
           <div class="sec-label">Granel</div>
           <div class="toggle-row">
-            <span class="toggle-label">Ops recebe rota granel?</span>
+            <span class="toggle-label">¿Ops recibe ruta granel?</span>
             <label class="toggle">
               <input type="checkbox" id="temGranel" onchange="toggleGranel()">
               <span class="slider-tog"></span>
             </label>
           </div>
           <div class="field" id="granel-wrap" style="display:none; margin-top:10px">
-            <label>Docas dedicadas a granel</label>
+            <label>Docks dedicados a granel</label>
             <input type="number" id="docasGranel" value="0" min="0">
           </div>
 
@@ -313,9 +312,9 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
           <div class="sec-label">BULKY</div>
           <div class="field-row">
             <div class="field">
-              <label>Volume BULKY total</label>
+              <label>Volumen BULKY total</label>
               <input type="number" id="volBulky" value="100" min="0">
-              <div class="field-comment">Volume BULKY total de pacotes processados no maior ciclo.</div>
+              <div class="field-comment">Volumen BULKY total de paquetes procesados en el ciclo mayor.</div>
             </div>
             <div class="field">
               <label>Horas de Dispatch</label>
@@ -324,38 +323,38 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
             </div>
           </div>
           <div class="field">
-            <label>% BULKY com carga interna</label>
+            <label>% BULKY con carga interna</label>
             <div class="range-row">
               <input type="range" id="pctBulkySlider" min="0" max="100" value="10" step="1"
                 oninput="sync('pctBulkySlider','pctBulky','pctBulkyVal','%')">
               <span class="range-val" id="pctBulkyVal">10%</span>
             </div>
             <input type="hidden" id="pctBulky" value="10">
-            <div class="field-comment">% de pacotes BULKY com dispatch interno (que não utilizam dock/muelle).</div>
+            <div class="field-comment">% de paquetes BULKY con dispatch interno (que no utilizan dock/muelle).</div>
           </div>
         </div>
       </div>
 
-      <button class="btn-calc" onclick="onCalc()">Calcular equipamentos &#8594;</button>
+      <button class="btn-calc" onclick="onCalc()">Calcular equipamientos &#8594;</button>
 
       <div class="premissas-wrap">
         <button class="premissas-btn" onclick="togglePremissas(this)">
-          <span>&#128203; Premissas fixas utilizadas</span>
+          <span>&#128203; Premisas fijas utilizadas</span>
           <span id="prem-icon">&#9660;</span>
         </button>
         <div class="premissas-body" id="premissas-body">
-          <div class="prem-item"><div class="prem-key">SPP Frágeis/Televisores</div><div class="prem-val">6 pct/baker</div></div>
+          <div class="prem-item"><div class="prem-key">SPP Frágiles/Televisores</div><div class="prem-val">6 pct/baker</div></div>
           <div class="prem-item"><div class="prem-key">Flow Large — Largo baker</div><div class="prem-val">1,2 m</div></div>
           <div class="prem-item"><div class="prem-key">Flow Large — Largo flow</div><div class="prem-val">2 m</div></div>
-          <div class="prem-item"><div class="prem-key">Flow Large — Ancho ilha</div><div class="prem-val">4,8 m</div></div>
-          <div class="prem-item"><div class="prem-key">Bakers/ilha GM (padrão)</div><div class="prem-val">22</div></div>
-          <div class="prem-item"><div class="prem-key">Bakers/ilha Large (padrão)</div><div class="prem-val">16</div></div>
-          <div class="prem-item"><div class="prem-key">SPP GM (fixo)</div><div class="prem-val">80</div></div>
-          <div class="prem-item"><div class="prem-key">SPP Large (fixo)</div><div class="prem-val">15</div></div>
+          <div class="prem-item"><div class="prem-key">Flow Large — Ancho isla</div><div class="prem-val">4,8 m</div></div>
+          <div class="prem-item"><div class="prem-key">Bakers/isla GM (estándar)</div><div class="prem-val">22</div></div>
+          <div class="prem-item"><div class="prem-key">Bakers/isla Large (estándar)</div><div class="prem-val">16</div></div>
+          <div class="prem-item"><div class="prem-key">SPP GM (fijo)</div><div class="prem-val">80</div></div>
+          <div class="prem-item"><div class="prem-key">SPP Large (fijo)</div><div class="prem-val">15</div></div>
           <div class="prem-item"><div class="prem-key">FC Doble — cap.</div><div class="prem-val">1.500 shp/h</div></div>
-          <div class="prem-item"><div class="prem-key">Carritos por ilha GM</div><div class="prem-val">4</div></div>
-          <div class="prem-item"><div class="prem-key">Produt. carrito BULKY</div><div class="prem-val">34 shp/h</div></div>
-          <div class="prem-item"><div class="prem-key">Arredondamento</div><div class="prem-val">Sempre ↑</div></div>
+          <div class="prem-item"><div class="prem-key">Carritos por isla GM</div><div class="prem-val">4</div></div>
+          <div class="prem-item"><div class="prem-key">Produc. carrito BULKY</div><div class="prem-val">34 shp/h</div></div>
+          <div class="prem-item"><div class="prem-key">Redondeo</div><div class="prem-val">Siempre ↑</div></div>
         </div>
       </div>
     </div>
@@ -364,13 +363,13 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
     <div class="results-sticky">
       <div class="card">
         <div class="result-header">
-          <div class="r-label">Resumo de equipamentos</div>
+          <div class="r-label">Resumen de equipamientos</div>
           <div class="r-title">Service Center — SVC</div>
         </div>
         <div id="result-area">
           <div class="empty-state">
             <div class="empty-icon">&#128290;</div>
-            <p>Preencha os parâmetros e clique em <strong>Calcular</strong> para ver os equipamentos necessários.</p>
+            <p>Completá los parámetros y hacé clic en <strong>Calcular</strong> para ver los equipamientos necesarios.</p>
           </div>
         </div>
       </div>
@@ -379,7 +378,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 </div>
 
 <script>
-
 function sync(sliderId, hiddenId, labelId, suffix) {
   var v = document.getElementById(sliderId).value;
   document.getElementById(hiddenId).value = v;
@@ -400,7 +398,6 @@ function isChecked(id) { return document.getElementById(id).checked; }
 function calcular() {
   var SPP_GM    = 80;
   var SPP_LARGE = 15;
-  // Premissas fixas Flow Large (dimensoes em metros)
   var LARGO_BK   = 1.2;
   var LARGO_FLOW = 2;
   var ANCHO_ILHA = 4.8;
@@ -426,45 +423,33 @@ function calcular() {
   var volGM    = volTotal * (1 - pVol);
   var volLarge = volTotal * pVol;
 
-  // Baker GM: ceil(volGM / SPP_GM * (1 + espejo) * (1 + backup))
-  var bkGMbase  = volGM / SPP_GM;
-  var bkGMtotal = Math.ceil(bkGMbase * (1 + pEspejo) * (1 + pBackup));
-
-  // Baker Large: ceil(volLarge / SPP_LARGE * (1 + backup))
+  var bkGMbase     = volGM / SPP_GM;
+  var bkGMtotal    = Math.ceil(bkGMbase * (1 + pEspejo) * (1 + pBackup));
   var bkLargeTotal = Math.ceil((volLarge / SPP_LARGE) * (1 + pBackup));
+  var qtdBandejas  = usaBandeja ? bkGMtotal * bandejasPorBK : 0;
 
-  // Bandejas
-  var qtdBandejas = usaBandeja ? bkGMtotal * bandejasPorBK : 0;
-
-  // Baker Frageis/Televisores: SPP fixo em 6
+  // Baker Fragiles/Televisores: SPP fijo en 6
   var bkTv = Math.ceil(qtdTv / 6);
 
-  // Flow Continuo (FC Doble)
   var volGMhora = volGM / horasSorteo;
   var fcDoble   = Math.ceil(volGMhora / 1500);
 
-  // Carritos de supermercado
-  var ilhasGM = (ilhasGMinput > 0) ? ilhasGMinput : Math.ceil(bkGMbase / bkPorIlhaGM);
+  var ilhasGM  = (ilhasGMinput > 0) ? ilhasGMinput : Math.ceil(bkGMbase / bkPorIlhaGM);
   var carritos = ilhasGM * 4;
 
-  // Ilhas Large
   var ilhasLarge = (ilhasLargeInput > 0) ? ilhasLargeInput : Math.ceil(bkLargeTotal / bkPorIlhaLarge);
 
-  // Flow Large Mayor: apenas inducao = ceil(volLarge / horasSorteo / 1500)
+  // Flow Large Mayor: solo induccion
   var volLargeHora   = volLarge / horasSorteo;
   var flowLargeMaior = Math.ceil(volLargeHora / 1500);
 
-  // Flow Large Menor: inducao (Mayor) + central + rua
-  // Central = ceil(ilhasLarge * LARGO_BK)  [= ceil(ilhasLarge * 1.2)]
-  // Rua     = floor(ilhasLarge * ANCHO_ILHA / (ANCHO_ILHA + LARGO_FLOW))
+  // Flow Large Menor: induccion + central + calle
   var flowLargeCentral = Math.ceil(ilhasLarge * LARGO_BK);
   var flowLargeRua     = Math.floor(ilhasLarge * ANCHO_ILHA / (ANCHO_ILHA + LARGO_FLOW));
   var flowLargeMenor   = flowLargeMaior + flowLargeCentral + flowLargeRua;
 
-  // Flow Flex Manual
   var flowFlex = temGranel ? docasGranel * 1 : 0;
 
-  // Carrito elevacao BULKY
   var bulkyInterno = volBulky * pBulkyInt;
   var bulkyPorHora = horasDispatch > 0 ? bulkyInterno / horasDispatch : 0;
   var carritoElev  = Math.ceil(bulkyPorHora / 34);
@@ -477,39 +462,7 @@ function calcular() {
   };
 }
 
-function renderResultPT(r) {
-  var infoGM = (r.ilhasGMinput === 0)
-    ? '<div class="alert info" style="margin:1rem 1.25rem 0;font-size:12px;">&#8505;&#65039; Ilhas GM calculadas automaticamente: <strong>' + r.ilhasGM + '</strong> (' + Math.ceil(r.bkGMbase) + ' bakers ÷ ' + r.bkPorIlhaGM + '/ilha). Padrão: 22 bakers/ilha — confirme o layout de engenharia para o valor assertivo.</div>'
-    : '';
-  var infoLarge = (r.ilhasLargeInput === 0)
-    ? '<div class="alert info" style="margin:0 1.25rem 0;font-size:12px;">&#8505;&#65039; Ilhas Large calculadas automaticamente: <strong>' + r.ilhasLarge + '</strong> (' + r.bkLargeTotal + ' bakers ÷ ' + r.bkPorIlhaLarge + '/ilha). Padrão: 16 bakers/ilha — confirme o layout de engenharia.</div>'
-    : '';
-  var grupos = [
-    { label: 'Sorteo GM', items: [
-      { nome: 'Flow Contínuo (FC Doble)', proc: 'Sorteo GM', qty: r.fcDoble },
-      { nome: 'Carrito de supermercado', proc: 'Sorteo GM', qty: r.carritos },
-    ]},
-    { label: 'Movimentação / Buffer', items: [
-      { nome: 'Baker GM', proc: 'Movimentação / Buffer', qty: r.bkGMtotal },
-      { nome: 'Baker Large', proc: 'Movimentação / Buffer', qty: r.bkLargeTotal },
-      { nome: 'Bandejas Baker GM', proc: 'Movimentação / Buffer', qty: r.qtdBandejas },
-    ]},
-    { label: 'Sorteo Large', items: [
-      { nome: 'Flow Large — Menor', proc: 'Sorteo Large', qty: r.flowLargeMenor },
-      { nome: 'Flow Large — Maior', proc: 'Sorteo Large', qty: r.flowLargeMaior },
-    ]},
-    { label: 'Recepção / Buffer Especial', items: [
-      { nome: 'Baker Televisores / Frágeis', proc: 'Recepção / Buffer', qty: r.bkTv },
-      { nome: 'Flow Flex Manual', proc: 'Recepção (Granel)', qty: r.flowFlex },
-    ]},
-    { label: 'Carga / Descarga', items: [
-      { nome: 'Carrito de Elevação', proc: 'BULKY', qty: r.carritoElev },
-    ]},
-  ];
-  return buildHTML(grupos, infoGM, infoLarge);
-}
-
-function renderResultES(r) {
+function renderResult(r) {
   var infoGM = (r.ilhasGMinput === 0)
     ? '<div class="alert info" style="margin:1rem 1.25rem 0;font-size:12px;">&#8505;&#65039; Islas GM calculadas automáticamente: <strong>' + r.ilhasGM + '</strong> (' + Math.ceil(r.bkGMbase) + ' bakers ÷ ' + r.bkPorIlhaGM + '/isla). Estándar: 22 bakers/isla — confirmar en el layout de ingeniería para el valor exacto.</div>'
     : '';
@@ -538,10 +491,6 @@ function renderResultES(r) {
       { nome: 'Carrito de Elevación', proc: 'BULKY', qty: r.carritoElev },
     ]},
   ];
-  return buildHTML(grupos, infoGM, infoLarge);
-}
-
-function buildHTML(grupos, infoGM, infoLarge) {
   var html = '<div class="animate">' + infoGM + infoLarge + '<div class="equip-list">';
   grupos.forEach(function(g, gi) {
     if (gi > 0) html += '<div class="equip-divider"></div>';
@@ -564,7 +513,7 @@ function togglePremissas(btn) {
 
 function onCalc() {
   var r = calcular();
-  document.getElementById('result-area').innerHTML = renderResultPT(r);
+  document.getElementById('result-area').innerHTML = renderResult(r);
 }
 window.addEventListener('load', onCalc);
 </script>
