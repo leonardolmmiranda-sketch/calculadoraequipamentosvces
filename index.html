@@ -8,27 +8,40 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --yellow: #FFE600; --yellow-mid: #F5D800; --yellow-light: #FFFBE6;
-  --blue: #3483FA; --blue-dark: #2968C8; --blue-deeper: #1A4F9E;
-  --blue-light: #EBF3FF; --blue-mid: #D4E8FF;
-  --dark: #1A1A2E; --text: #333333; --gray: #717171;
-  --gray-light: #F5F5F5; --border: #EBEBEB; --white: #FFFFFF;
-  --success: #00A650; --success-light: #E8F8EF;
-  --warning-light: #FFF8E6; --warning-border: #FFE08A; --warning-text: #7A5200;
+  --yellow:#FFF8DC;
+  --yellow-mid:#F5E97A;
+  --yellow-dark:#E8D98A;
+  --yellow-light:#FFFDF0;
+  --blue:#2C3E6B;
+  --blue-dark:#1E2D52;
+  --blue-deeper:#15203D;
+  --blue-light:#EEF2FF;
+  --blue-mid:#C5CFEA;
+  --dark:#1A1A2E;
+  --text:#333333;
+  --gray:#717171;
+  --gray-light:#F5F5F5;
+  --border:#EBEBEB;
+  --white:#FFFFFF;
+  --success:#2E7D5E;
+  --success-light:#E8F5EE;
+  --warning-light:#FFF8E6;
+  --warning-border:#FFE08A;
+  --warning-text:#7A5200;
 }
-body { font-family: 'Inter', sans-serif; background: #F2F2F2; color: var(--text); min-height: 100vh; }
-header { background: var(--yellow); height: 60px; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--yellow-mid); }
+body { font-family: 'Inter', sans-serif; background: #EDEAE3; color: var(--text); min-height: 100vh; }
+header { background: var(--yellow); height: 60px; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--yellow-dark); }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo-mark { width: 36px; height: 36px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
 .logo-mark svg { width: 20px; height: 20px; }
 .logo-name { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 17px; color: var(--blue-deeper); }
 .logo-sub { font-size: 10px; font-weight: 600; color: var(--blue-dark); letter-spacing: 1px; text-transform: uppercase; margin-top: 1px; }
 .header-right { display: flex; align-items: center; gap: 10px; }
-.badge-ops { background: var(--blue); color: var(--yellow); font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
-.lang-link { font-size: 12px; font-weight: 600; color: var(--blue-deeper); text-decoration: none; background: rgba(255,255,255,0.7); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--yellow-mid); transition: background .15s; }
+.badge-ops { background: var(--blue); color: var(--yellow-mid); font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+.lang-link { font-size: 12px; font-weight: 600; color: var(--blue-deeper); text-decoration: none; background: rgba(255,255,255,0.7); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--yellow-dark); transition: background .15s; }
 .lang-link:hover { background: white; }
-.hero { background: var(--yellow); padding: 2.5rem 2rem 2rem; text-align: center; border-bottom: 2px solid var(--yellow-mid); }
-.hero-tag { display: inline-block; background: var(--blue); color: var(--yellow); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; }
+.hero { background: var(--yellow); padding: 2.5rem 2rem 2rem; text-align: center; border-bottom: 2px solid var(--yellow-dark); }
+.hero-tag { display: inline-block; background: var(--blue); color: var(--yellow-mid); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; }
 .hero h1 { font-family: 'Raleway', sans-serif; font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; color: var(--blue-deeper); letter-spacing: -0.8px; line-height: 1.2; margin-bottom: 8px; }
 .hero p { font-size: 14px; color: var(--blue-dark); opacity: 0.8; max-width: 520px; margin: 0 auto; }
 .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
@@ -37,7 +50,7 @@ header { background: var(--yellow); height: 60px; padding: 0 2rem; display: flex
 .card { background: var(--white); border-radius: 12px; border: 1px solid var(--border); }
 .card + .card { margin-top: 16px; }
 .card-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
-.card-icon { width: 32px; height: 32px; background: var(--yellow-light); border: 1px solid var(--yellow-mid); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+.card-icon { width: 32px; height: 32px; background: var(--yellow-light); border: 1px solid var(--yellow-dark); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; }
 .card-header h2 { font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; color: var(--dark); }
 .card-header p { font-size: 11px; color: var(--gray); margin-top: 1px; }
 .card-body { padding: 1.25rem; }
@@ -51,7 +64,7 @@ label .hint { font-weight: 400; color: var(--gray); }
 .field-comment { font-size: 11px; color: var(--gray); line-height: 1.5; margin-top: 5px; background: var(--gray-light); border-radius: 6px; padding: 6px 9px; border-left: 3px solid var(--blue-mid); }
 .field-comment.warn { background: var(--warning-light); border-left-color: var(--warning-border); color: var(--warning-text); }
 input[type="number"], select { width: 100%; height: 40px; border: 1.5px solid var(--border); border-radius: 8px; padding: 0 12px; font-size: 14px; font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); outline: none; transition: border-color .15s; -webkit-appearance: none; appearance: none; }
-input[type="number"]:focus, select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(52,131,250,.1); }
+input[type="number"]:focus, select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(44,62,107,.1); }
 input[type="number"][readonly] { background: var(--gray-light); color: var(--gray); cursor: not-allowed; }
 .select-wrap { position: relative; }
 .select-wrap::after { content:''; position:absolute; right:12px; top:50%; transform:translateY(-50%); width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:5px solid var(--gray); pointer-events:none; }
@@ -72,8 +85,8 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 .btn-calc:active { transform: scale(0.99); }
 .results-sticky { position: sticky; top: 76px; }
 .result-header { background: var(--blue); padding: 1.5rem; border-radius: 12px 12px 0 0; text-align: center; }
-.result-header .r-label { font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,.65); margin-bottom:4px; }
-.result-header .r-title { font-family:'Raleway',sans-serif; font-size:15px; font-weight:700; color:var(--yellow); }
+.result-header .r-label { font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,.6); margin-bottom:4px; }
+.result-header .r-title { font-family:'Raleway',sans-serif; font-size:15px; font-weight:700; color:var(--yellow-mid); }
 .equip-list { padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 8px; }
 .equip-group-label { font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gray); padding:4px 2px 0; }
 .equip-row { display:flex; align-items:center; justify-content:space-between; padding:10px 12px; border-radius:8px; background:var(--gray-light); border:1px solid var(--border); transition:background .15s; }
@@ -103,7 +116,7 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 .hero-ml-icon { width: 46px; height: 46px; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .hero-ml-icon svg { width: 26px; height: 26px; }
 .hero h1 { margin-bottom: 0; }
-.btn-voltar { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--blue-deeper); text-decoration: none; background: rgba(255,255,255,0.7); padding: 5px 14px; border-radius: 20px; border: 1px solid var(--yellow-mid); transition: background .15s; }
+.btn-voltar { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--blue-deeper); text-decoration: none; background: rgba(255,255,255,0.7); padding: 5px 14px; border-radius: 20px; border: 1px solid var(--yellow-dark); transition: background .15s; }
 .btn-voltar:hover { background: white; }
 </style>
 </head>
@@ -111,7 +124,7 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 
 <header>
   <a class="logo" href="#">
-    <div class="logo-mark"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.5" r="3.5" fill="#FFE600"/><path d="M2.5 17.5c0-4.142 3.358-7.5 7.5-7.5s7.5 3.358 7.5 7.5" stroke="#FFE600" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+    <div class="logo-mark"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.5" r="3.5" fill="#F5E97A"/><path d="M2.5 17.5c0-4.142 3.358-7.5 7.5-7.5s7.5 3.358 7.5 7.5" stroke="#F5E97A" stroke-width="2.2" stroke-linecap="round"/></svg></div>
     <div>
       <div class="logo-name">Mercado Libre</div>
       <div class="logo-sub">Herramientas Internas</div>
@@ -127,7 +140,7 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 <div class="hero">
   <div class="hero-tag">Planificación Operacional</div>
   <div class="hero-title-wrap">
-    <div class="hero-ml-icon"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="8" r="4.5" fill="#FFE600"/><path d="M2 24c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#FFE600" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+    <div class="hero-ml-icon"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="8" r="4.5" fill="#F5E97A"/><path d="M2 24c0-6.075 4.925-11 11-11s11 4.925 11 11" stroke="#F5E97A" stroke-width="2.5" stroke-linecap="round"/></svg></div>
     <h1>Calculadora de Equipamientos SVC</h1>
   </div>
   <p>Estimá la cantidad de equipamientos necesarios para la operación de Service Center en base a los parámetros de tu ciclo mayor.</p>
@@ -137,7 +150,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
   <div class="layout">
     <div>
 
-      <!-- DATOS OPS -->
       <div class="card">
         <div class="card-header">
           <div class="card-icon">&#128230;</div>
@@ -145,7 +157,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
         </div>
         <div class="card-body">
           <div class="sec-label">Volumen y composición</div>
-
           <div class="field-row">
             <div class="field">
               <label>Volumen total <span class="hint">(paquetes/ciclo)</span></label>
@@ -163,7 +174,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
               <div class="field-comment">% total de voluminosos del ciclo mayor.</div>
             </div>
           </div>
-
           <div class="field-row">
             <div class="field">
               <label>Baker espejo GM (%)</label>
@@ -186,7 +196,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
               <div class="field-comment">Cantidad de baker extra para backup por daños y usos no identificados como estándar.</div>
             </div>
           </div>
-
           <div class="field">
             <label>Horas de sorteo</label>
             <input type="number" id="horasSorteo" value="3" min="0.5" step="0.5">
@@ -195,7 +204,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 
           <hr class="divider">
           <div class="sec-label">SPP (fijo por indicación)</div>
-
           <div class="field-row">
             <div class="field">
               <label>SPP GM (fijo: 80)</label>
@@ -211,7 +219,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 
           <hr class="divider">
           <div class="sec-label">Bandejas para Baker GM</div>
-
           <div class="toggle-row">
             <span class="toggle-label">¿Utilizar bandejas para Baker GM?</span>
             <label class="toggle">
@@ -227,7 +234,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
 
           <hr class="divider">
           <div class="sec-label">Televisores y Frágiles</div>
-
           <div class="field">
             <label>Cantidad de Televisores</label>
             <input type="number" id="qtdTv" value="20" min="0">
@@ -236,7 +242,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
         </div>
       </div>
 
-      <!-- SORTEO GM -->
       <div class="card">
         <div class="card-header">
           <div class="card-icon">&#128256;</div>
@@ -258,7 +263,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
         </div>
       </div>
 
-      <!-- SORTEO LARGE -->
       <div class="card">
         <div class="card-header">
           <div class="card-icon">&#128208;</div>
@@ -288,7 +292,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
         </div>
       </div>
 
-      <!-- BULKY / GRANEL -->
       <div class="card">
         <div class="card-header">
           <div class="card-icon">&#128667;</div>
@@ -307,7 +310,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
             <label>Docks dedicados a granel</label>
             <input type="number" id="docasGranel" value="0" min="0">
           </div>
-
           <hr class="divider">
           <div class="sec-label">BULKY</div>
           <div class="field-row">
@@ -359,7 +361,6 @@ input:checked + .slider-tog:before { transform: translateX(18px); }
       </div>
     </div>
 
-    <!-- RESULTS -->
     <div class="results-sticky">
       <div class="card">
         <div class="result-header">
@@ -428,7 +429,6 @@ function calcular() {
   var bkLargeTotal = Math.ceil((volLarge / SPP_LARGE) * (1 + pBackup));
   var qtdBandejas  = usaBandeja ? bkGMtotal * bandejasPorBK : 0;
 
-  // Baker Fragiles/Televisores: SPP fijo en 6
   var bkTv = Math.ceil(qtdTv / 6);
 
   var volGMhora = volGM / horasSorteo;
@@ -439,11 +439,9 @@ function calcular() {
 
   var ilhasLarge = (ilhasLargeInput > 0) ? ilhasLargeInput : Math.ceil(bkLargeTotal / bkPorIlhaLarge);
 
-  // Flow Large Mayor: solo induccion
   var volLargeHora   = volLarge / horasSorteo;
   var flowLargeMaior = Math.ceil(volLargeHora / 1500);
 
-  // Flow Large Menor: induccion + central + calle
   var flowLargeCentral = Math.ceil(ilhasLarge * LARGO_BK);
   var flowLargeRua     = Math.floor(ilhasLarge * ANCHO_ILHA / (ANCHO_ILHA + LARGO_FLOW));
   var flowLargeMenor   = flowLargeMaior + flowLargeCentral + flowLargeRua;
